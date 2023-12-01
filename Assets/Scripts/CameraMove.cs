@@ -8,11 +8,6 @@ public class CameraMove : MonoBehaviour
     public float smoothing;
     public Vector2 maxPosition;
     public Vector2 minPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Bouger la caméra seulement à la fin par frame
     void LateUpdate()

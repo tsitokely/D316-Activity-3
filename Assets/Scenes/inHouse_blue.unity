@@ -6066,6 +6066,7 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1856876141}
   animator: {fileID: 1856876138}
+  initialSprite: {fileID: -1233848432, guid: feab413313fd7c549a47e49b59c97c01, type: 3}
 --- !u!70 &1856876140
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

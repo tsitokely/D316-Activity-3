@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class Final : MonoBehaviour
 {
@@ -37,15 +35,15 @@ public class Final : MonoBehaviour
                 dialogBox.SetActive(true);
                 dialogText.text = dialog;
                 // Lancer une coroutine pour fermer la boite de dialogue après 5 secondes sans action de l'utilisateur
-                StartCoroutine(DeactivateAfterSeconds(5));
-                QuitGame();
+                Invoke("CloseDialogBox", 10);
+                Invoke("QuitGame", 10);
             }
             else
             {
                 dialogBox.SetActive(true);
                 dialogText.text = dialog2;
                 // Lancer une coroutine pour fermer la boite de dialogue après 5 secondes sans action de l'utilisateur
-                StartCoroutine(DeactivateAfterSeconds(1));
+                Invoke("CloseDialogBox", 1);
             }
         } 
     }
@@ -68,12 +66,8 @@ public class Final : MonoBehaviour
     }
 
     // Coroutine pour désactiver la boite de dialogue après quelques secondes
-    IEnumerator DeactivateAfterSeconds(float seconds)
+    void CloseDialogBox()
     {
-        // Wait for the specified number of seconds
-        yield return new WaitForSeconds(seconds);
-
-        // Deactivate the GameObject
         dialogBox.SetActive(false);
     }
 

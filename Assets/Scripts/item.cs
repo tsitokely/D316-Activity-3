@@ -1,6 +1,5 @@
-using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class item : MonoBehaviour
 {

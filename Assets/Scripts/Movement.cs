@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -12,13 +10,21 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
 
+    private Animator animInit;
+
     void Start()
     {
         if (GameManager.Instance != null && GameManager.Instance.NextSpawnPosition.HasValue)
         {
             // Donner comme position les coordonées sur la prochaine scène si le joueur est passé par un warp point
-            Debug.Log(GameManager.Instance.NextSpawnPosition);
             transform.position = new Vector3(GameManager.Instance.NextSpawnPosition.Value.x, GameManager.Instance.NextSpawnPosition.Value.y, 0);
+            animInit = this.gameObject.GetComponent<Animator>();
+            if (this.gameObject.scene.name != "Islands")
+            {
+                animInit.SetFloat("Horizontal", 0);
+                animInit.SetFloat("Vertical", 1);
+            } 
+            
         }
         else
         {
