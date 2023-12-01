@@ -34,7 +34,7 @@ public class Final : MonoBehaviour
             {
                 dialogBox.SetActive(true);
                 dialogText.text = dialog;
-                // Lancer une coroutine pour fermer la boite de dialogue après 5 secondes sans action de l'utilisateur
+                // Lancer une fonction pour fermer la boite de dialogue après 10 secondes sans action de l'utilisateur et pour fermer le jeu
                 Invoke("CloseDialogBox", 10);
                 Invoke("QuitGame", 10);
             }
@@ -42,7 +42,7 @@ public class Final : MonoBehaviour
             {
                 dialogBox.SetActive(true);
                 dialogText.text = dialog2;
-                // Lancer une coroutine pour fermer la boite de dialogue après 5 secondes sans action de l'utilisateur
+                // Lancer une fonction pour fermer la boite de dialogue après 1 secondes sans action de l'utilisateur
                 Invoke("CloseDialogBox", 1);
             }
         } 

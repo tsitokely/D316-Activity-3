@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        if (GameManager.Instance != null && GameManager.Instance.NextSpawnPosition.HasValue)
+        if (GameManager.Instance.NextSpawnPosition.HasValue)
         {
             // Donner comme position les coordonées sur la prochaine scène si le joueur est passé par un warp point
             transform.position = new Vector3(GameManager.Instance.NextSpawnPosition.Value.x, GameManager.Instance.NextSpawnPosition.Value.y, 0);
@@ -63,13 +63,6 @@ public class Movement : MonoBehaviour
 
     void UpdateMovement()
     {
-        //if (PlayerSpawnManager.Instance != null)
-        {
-          //  transform.position = PlayerSpawnManager.Instance.Player.transform.position;
-        }
-        //else
-        {
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-        }
     }
 }
