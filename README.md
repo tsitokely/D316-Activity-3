@@ -14,7 +14,7 @@ Veuillez utiliser Unity version **LTS 2022.3.8f1** pour lancer le projet
 
 ## Privacy Policy
 
-*Veuillez noter que je ne suis pas affilié à l'auteur de l'asset utilisé dans ce projet*
+*Veuillez noter que je ne suis pas affilié aux auteurs des assets utilisés dans ce projet*
 
 ## License
 
